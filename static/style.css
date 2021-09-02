@@ -1,0 +1,184 @@
+div {
+    border:solid 0px red;
+}
+
+div#all {
+    width :900px;
+    clear:left;
+}
+div#header {
+    width :900px;
+    background-color: #000080;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+div#header h1 {
+    font-size:14pt;
+    color: #ffffff;
+}
+div#header p {
+    font-size:10pt;
+    color: #ffffff;
+}
+
+div#kijun_suii {
+    width: 520px;
+    float: left;
+}
+
+div#div_nav_aum {
+    width: 370px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    float: right;
+}
+div#div_pct_change {
+    width: 370px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    float: right;
+}
+
+div#box2 {
+    width :900px;
+    clear:left;
+}
+
+div#div_dividend {
+    width :900px;
+    clear:left;
+}
+
+
+/* 基準価額、純資産総額(3列) */
+table.nav_aum {
+    width: 370px;
+    border-collapse: collapse;
+    font-size: 10pt;
+}
+
+table.nav_aum th {
+    border:none;
+}
+
+table.nav_aum td {
+    background-color: #ffffff;
+    padding-right: 20px;
+    empty-cells: hide;
+    width: 33%;
+    text-align: right;
+}
+
+table.nav_aum th {
+    background-color: #99ccff;
+    font-weight: normal;
+}
+table.nav_aum tr th {
+    background-color: #99ccff;
+    border: solid 2px black;
+    padding-right: 0px;
+    text-align: center;
+    width: 34%;
+}
+table.nav_aum tr td {
+    background-color: #99ccff;
+    padding-right: 0px;
+    text-align: center;
+    width: 34%;
+}
+
+
+/* 期間別騰落率(4列) */
+table.pct_change {
+    width: 370px;
+    border-collapse: collapse;
+    font-size: 10pt;
+}
+
+table.pct_change th {
+    border:solid 2px black;
+}
+
+table.pct_change td {
+    background-color: #ffffff;
+    border:solid 2px black;
+    padding-right: 20px;
+    empty-cells: hide;
+    width: 25%;
+    text-align: right;
+}
+
+table.pct_change th {
+    background-color: #99ccff;
+    font-weight: normal;
+}
+table.pct_change th:first-child {
+    background-color: #ffffff;
+    border-left: none;
+    border-top: none;
+}
+table.pct_change tr td:first-child {
+    background-color: #99ccff;
+    padding-right: 0px;
+    text-align: center;
+    width: 25%;
+}
+
+/* 分配の推移 */
+table.dividend {
+    width: 900px;
+    border-collapse: collapse;
+    font-size: 10pt;
+}
+
+table.dividend th {
+    border:solid 2px black;
+    width: 50px;
+}
+
+table.dividend td {
+    background-color: #ffffff;
+    border:solid 2px black;
+    padding-right: 10px;
+    empty-cells: hide;
+    width: 50px;
+    text-align: right;
+}
+
+table.dividend th {
+    background-color: #99ccff;
+    font-weight: normal;
+}
+table.dividend tr td:first-child {
+    background-color: #99ccff;
+    padding-right: 0px;
+    text-align: center;
+}
+
+/* ページ内コンテンツのヘッダ */
+h2.content-header {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: #000080;
+    color: #ffffff;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+/* ※で始まる備考 */
+ul.notes li {
+    list-style-type: none;
+    font-size: 9pt;
+    text-indent: -1.5em;
+}
+
+
+p.mishin-note {
+    border:dashed 1px black;
+    font-size: 9pt;
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,10 @@
+Flask
+jinja2
+lxml
+pandas
+pandas-highcharts
+plotly
+python-dateutil
+python-highcharts
+google-cloud-datastore
+ToushinReader==0.2.3

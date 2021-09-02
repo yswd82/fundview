@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<!--        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+        <title>{{ title }}</title>
+    </head>
+
+    <body>
+    <section class="section has-background-white">
+        <div class="container has-background-gray" style="width:300px; float:left;">
+            <aside class="menu">
+                <div class="block" id="footer">
+                    <p class="menu-label">流出入額ランキング</p>
+                    <ul class="menu-list">
+                        {% for i,n,f in get_ranking() %}
+                            <li><a href="https://fundview-617a1.web.app/design_b/{{i}}">{{ n }} {{ f }}百万円</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <div class="container has-background-gray" style="float:left;" id="all">
+            <div class="box content has-background-primary" id="header">
+                <h1 class="title">{{ fund_name }}</h1>
+                <p>{{ fund_category }}</p>
+            </div>
+
+            <div class="section has-background-white" id="box1">
+                <div class="box container" id="kijun_suii">
+                    <div class="box content has-background-primary">
+                        <h2 class="title">基準価額の推移</h2>
+                    </div>
+                    <div class="box content has-text-centered">
+                    {% autoescape false %}
+                    {{ html_basic_price_graph }}
+                    {% endautoescape %}
+                    </div>
+
+                    <ul class="notes">
+                    {% for note in base_price_note %}
+                        <li>{{ note }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="box container has-text-centered" id="div_nav_aum">
+                    <div class="box content has-background-primary">
+                        <h2 class="title">基準価額、純資産総額</h2>
+                    </div>
+                    <div class="box content has-text-centered">
+                    {% autoescape false %}
+                    {{ html_nav_aum }}
+                    {% endautoescape %}
+                    </div>
+               </div>
+
+                <div class="block" id="div_pct_change">
+                    <div class="box content has-background-primary">
+                        <h2 class="content-header">期間別騰落率</h2>
+                    </div>
+                    <div class="box content has-text-centered">
+                    {% autoescape false %}
+                    {{ html_pct_change_by_period }}
+                    {% endautoescape %}
+                    </div>
+                    <ul class="notes">
+                        <li>{{ base_price_return_note }}</li>
+                    </ul>
+                </div>
+<!--
+                <div id="box2">
+                    <p class="mishin-note">
+                        {{ benchmark_note }}
+                    </p>
+                </div>
+-->
+            </div>
+
+            <div class="block" id="div_dividend">
+                <div class="box content has-background-primary">
+                    <h2 class="content-header">分配の推移（1万口当たり、税引前）</h2>
+                </div>
+                    <div class="box content has-text-centered">
+                    {% autoescape false %}
+                    {{ html_dividend }}
+                    {% endautoescape %}
+                    </div>
+            </div>
+        </div>
+    </section>
+    </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.6.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.6.3/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</html>

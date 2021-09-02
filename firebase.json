@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "venv"
+    ],
+    // Add the "rewrites" attribute within "hosting"
+    "rewrites": [ {
+      "source": "**",
+      "run": {
+        "serviceId": "fv2",  // "service name" (from when you deployed the container image)
+        "region": "asia-northeast1"     // optional (if omitted, default is us-central1)
+      }
+    } ]
+  }
+}
